@@ -7,12 +7,15 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
+// const BASE_URL = "https://zerodhaproject-yrms.onrender.com/";
+
+
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:3002/newOrder", {
+    axios.post("https://zerodhaproject-yrms.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
